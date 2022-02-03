@@ -14,14 +14,30 @@ public class CloudMaster : MonoBehaviour
     public GameObject cloud1;
     public GameObject cloud2;
 
+    private List<CloudLogic> clouds = new List<CloudLogic>();
+
     int order;
 
     void Start()
     {
         RandomizeOrder();
+        
+        clouds.Add(cloud0.GetComponent<CloudLogic>());
+        clouds.Add(cloud1.GetComponent<CloudLogic>());
+        clouds.Add(cloud2.GetComponent<CloudLogic>());
     }
 
-    void RandomizeOrder()
+    public void ResetClouds()
+    {
+        foreach (var cloud in clouds)
+        {
+            cloud.ResetState();
+        }
+        
+        RandomizeOrder();
+    }
+
+    public void RandomizeOrder()
     {
         order = Random.Range(0, 3);
         Debug.Log("?" + order);

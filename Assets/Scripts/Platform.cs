@@ -7,7 +7,7 @@ public class Platform : MonoBehaviour
         get => speed;
         set => speed = value;
     }
-    
+
     [SerializeField] private float speed;
 
     private void Update()

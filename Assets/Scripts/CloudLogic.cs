@@ -16,7 +16,7 @@ public class CloudLogic : MonoBehaviour
         ResetState();
     }
 
-    void ResetState()
+    public void ResetState()
     {
         original_cloud.SetActive(true);
         storm_cloud.SetActive(false);
@@ -67,11 +67,9 @@ public class CloudLogic : MonoBehaviour
     //Bullet collision
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("collision");
-        if(other = bullet.GetComponent<Collider>())
+        if(TryGetComponent(out Bullet bullet))
         {
             SetState();
-            Debug.Log(other);
         }        
     }
 }
