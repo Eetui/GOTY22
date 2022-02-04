@@ -67,7 +67,7 @@ public class CloudLogic : MonoBehaviour
     //Bullet collision
     private void OnTriggerEnter(Collider other)
     {
-        if(TryGetComponent(out Bullet bullet))
+        if(other.TryGetComponent(out Bullet bullet))
         {
             SetState();
         }        

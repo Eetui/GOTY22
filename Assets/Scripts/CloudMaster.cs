@@ -40,7 +40,6 @@ public class CloudMaster : MonoBehaviour
     public void RandomizeOrder()
     {
         order = Random.Range(0, 3);
-        Debug.Log("?" + order);
 
         if (order == 0)
         {
