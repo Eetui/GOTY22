@@ -2,18 +2,21 @@
 
 public class Platform : MonoBehaviour
 {
-    public float Speed
-    {
-        get => speed;
-        set => speed = value;
-    }
-
-    [SerializeField] private float speed;
-
+    public float Speed { get; set; }
+    public bool Move { get; set; }
     private void Update()
     {
-        transform.Translate(-Vector3.forward * speed * Time.deltaTime);
+        if (!Move) return;
+        transform.Translate(-Vector3.forward * Speed * Time.deltaTime);
+    }
+
+    private void OnEnable()
+    {
+        PlatformManager.Instance.Platforms.Add(this);
+    }
+
+    private void OnDisable()
+    {
+        PlatformManager.Instance.Platforms.Remove(this);
     }
 }
-
-

@@ -9,11 +9,9 @@ public class ManagerActions : MonoBehaviour
     {
         gm = GameManager.Instance;
     }
-
-    [ContextMenu("Change State Action")]
+    
     public void ChangeStateAction()
     {
-        Debug.Log("ChangeStateAction", this);
         gm.SetState(state);
     }
 }

@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 public enum GameState
 {
@@ -22,7 +21,7 @@ public class GameManager : MonoBehaviour
 
     public GameState CurrentState { get; private set; }
 
-    public event Action OnStateChanged;
+    public event Action<GameState> OnStateChanged;
     
     private void Awake()
     {
@@ -39,6 +38,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         SetFirstState(GameState.Start);
+        OnStateChanged?.Invoke(CurrentState);
     }
 
     public void SetState(GameState nextState)
@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
         {
             StartCoroutine(FadeCanvasGroup(true, GetStateCanvasGroup(nextState), 1f));
             CurrentState = nextState;
-            OnStateChanged?.Invoke();
+            OnStateChanged?.Invoke(CurrentState);
         }));
     }
     
