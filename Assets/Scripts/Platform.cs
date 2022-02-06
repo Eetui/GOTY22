@@ -4,15 +4,14 @@ public class Platform : MonoBehaviour
 {
     public float Speed { get; set; }
     public bool Move { get; set; }
-    private void Update()
+    private void FixedUpdate()
     {
         if (!Move) return;
-        transform.Translate(-Vector3.forward * Speed * Time.deltaTime);
+        transform.Translate(-Vector3.forward * Speed);
     }
 
     private void OnEnable()
     {
-        Debug.Log(PlatformManager.Instance);
         PlatformManager.Instance.Platforms.Add(this);
     }
 
