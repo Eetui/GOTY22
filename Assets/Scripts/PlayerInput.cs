@@ -31,6 +31,7 @@ public class PlayerInput : MonoBehaviour
     //Shooting
     public GameObject bulletPrefab;
     private float bulletDistance = 28f;
+    private float bulletLifetime = 0.5f;
 
     private void Start()
     {
@@ -216,8 +217,8 @@ public class PlayerInput : MonoBehaviour
     {
         //Vector3 curTarget = new Vector3(posCurrent.x, posCurrent.y, 20f);
         GameObject shot = Instantiate(bulletPrefab, this.gameObject.transform.position, Quaternion.identity);
-        shot.LeanMoveLocalZ(bulletDistance, 0.5f);
-        yield return new WaitForSeconds(0.5f);
+        shot.LeanMoveLocalZ(bulletDistance, bulletLifetime);
+        yield return new WaitForSeconds(bulletLifetime);
         Destroy(shot);        
     }
 
