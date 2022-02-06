@@ -29,6 +29,9 @@ public class GameManager : MonoBehaviour
     public GameState CurrentState { get; private set; }
 
     public event Action<GameState> OnStateChanged;
+
+    private float speedGain = 0.01f;
+    private float speedLoss = 0.09f;
     
     private void Awake()
     {
@@ -141,14 +144,14 @@ public class GameManager : MonoBehaviour
             EndGame();
         }
         
-        PlatformManager.Instance.ChangeSpeed(-0.08f);
+        PlatformManager.Instance.ChangeSpeed(-speedLoss);
         healthText.UpdateText(Instance.Health.ToString());
     }
 
     public void ScorePoints()
     {
         FindObjectOfType<AudioManager>().Play("PointSound");
-        PlatformManager.Instance.ChangeSpeed(0.02f);
+        PlatformManager.Instance.ChangeSpeed(speedGain);
         Instance.Points += 10;
         
         pointsText.UpdateText(Instance.Points.ToString());
