@@ -101,16 +101,14 @@ public class GameManager : MonoBehaviour
     
     public void TakeDamage()
     {
-        //TODO: Damange Sounds
-        Debug.Log("TODO: Damage Sounds");
+        FindObjectOfType<AudioManager>().Play("DamageSound");
         Instance.Health--;
         PlatformManager.Instance.ChangeSpeed(-0.08f);
     }
 
     public void ScorePoints()
     {
-        //TODO: ScorePoints Sounds
-        Debug.Log("TODO: ScorePoints");
+        FindObjectOfType<AudioManager>().Play("PointSound");
         PlatformManager.Instance.ChangeSpeed(0.02f);
         Instance.Points += 10;
     }
