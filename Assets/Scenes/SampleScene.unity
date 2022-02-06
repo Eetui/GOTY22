@@ -834,6 +834,28 @@ CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 5247746915302491338, guid: 219eb2d1acb63934385fcee1334def64, type: 3}
   m_PrefabInstance: {fileID: 717738062}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &717738068 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5604990330741386245, guid: 219eb2d1acb63934385fcee1334def64, type: 3}
+  m_PrefabInstance: {fileID: 717738062}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 944dd321d2f8ecf41abd3513644a5ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &717738069 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 928818450137608682, guid: 219eb2d1acb63934385fcee1334def64, type: 3}
+  m_PrefabInstance: {fileID: 717738062}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 944dd321d2f8ecf41abd3513644a5ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &786954214 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6666106931720293642, guid: 3f23326b9be7efe4f9c715e7a620b62d, type: 3}
@@ -1145,6 +1167,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthText: {fileID: 717738064}
   pointsText: {fileID: 717738065}
+  pointsGameOverText: {fileID: 717738069}
+  highScoreText: {fileID: 717738068}
   startScreen: {fileID: 717738067}
   gameScreen: {fileID: 717738066}
   gameOverScreen: {fileID: 717738063}
