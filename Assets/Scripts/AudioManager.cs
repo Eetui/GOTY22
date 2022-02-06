@@ -29,4 +29,12 @@ public class AudioManager : MonoBehaviour
         Play("Music");
     }
 
+    public void MuteAll()
+    {
+        foreach (var s in sounds)
+        {
+            s.source.mute = !s.source.mute;
+        }
+    }
+
 }
