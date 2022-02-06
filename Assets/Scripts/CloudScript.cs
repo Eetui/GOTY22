@@ -8,8 +8,7 @@ public class CloudScript : MonoBehaviour
     {
         if(other.CompareTag("Player") == true)
         {
-            //TODO: DealDamage
-            Debug.Log("TODO: DEAL DMG");
+            GameManager.Instance.TakeDamage();
             this.gameObject.SetActive(false);
         }
     }

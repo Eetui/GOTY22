@@ -4,13 +4,13 @@ using UnityEngine;
 public class PlatformManager : MonoBehaviour
 {
     public static PlatformManager Instance;
+
+    [SerializeField] private float startSpeed;
     
     public List<Platform> Platforms = new List<Platform>();
     
     private void Awake()
     {
-        Debug.Log("Tää pitää olla eka");
-
         if (Instance == null)
         {
             Instance = this;
@@ -43,7 +43,7 @@ public class PlatformManager : MonoBehaviour
     {
         foreach (var plat in Platforms)
         {
-            plat.Speed = 4f;
+            plat.Speed = startSpeed;
             plat.Move = true;
         }
     }
@@ -53,6 +53,16 @@ public class PlatformManager : MonoBehaviour
         foreach (var plat in Platforms)
         {
             plat.Move = false;
+        }
+    }
+
+    public void ChangeSpeed(float speedChange)
+    {
+        if (Platforms[0].Speed + speedChange <= startSpeed) return;
+
+        foreach (var plat in Platforms)
+        {
+            plat.Speed += speedChange;
         }
     }
 }

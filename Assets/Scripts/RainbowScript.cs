@@ -8,8 +8,7 @@ public class RainbowScript : MonoBehaviour
     {
         if(other.CompareTag("Player") == true)
         {
-            //TODO: GivePoints
-            Debug.Log("TODO: GIVE POINTS");
+            GameManager.Instance.ScorePoints();
             this.gameObject.SetActive(false);
         }
     }

@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
 
     public int Coins { get; set; }
     public int Points { get; set; }
+    public int MaxHealth { get; set; } = 5;
+    public int Health { get; set; }
 
     [SerializeField] private CanvasGroup startScreen;
     [SerializeField] private CanvasGroup gameScreen;
@@ -39,6 +41,11 @@ public class GameManager : MonoBehaviour
     {
         SetFirstState(GameState.Start);
         OnStateChanged?.Invoke(CurrentState);
+    }
+    
+    public void ResetGame()
+    {
+        Health = MaxHealth;
     }
 
     public void SetState(GameState nextState)
@@ -90,5 +97,21 @@ public class GameManager : MonoBehaviour
             GameState.GameOver => gameOverScreen,
             _ => startScreen
         };
+    }
+    
+    public void TakeDamage()
+    {
+        //TODO: Damange Sounds
+        Debug.Log("TODO: Damage Sounds");
+        Instance.Health--;
+        PlatformManager.Instance.ChangeSpeed(-0.08f);
+    }
+
+    public void ScorePoints()
+    {
+        //TODO: ScorePoints Sounds
+        Debug.Log("TODO: ScorePoints");
+        PlatformManager.Instance.ChangeSpeed(0.02f);
+        Instance.Points += 10;
     }
 }

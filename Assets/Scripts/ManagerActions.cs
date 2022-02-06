@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class ManagerActions : MonoBehaviour
@@ -13,5 +14,10 @@ public class ManagerActions : MonoBehaviour
     public void ChangeStateAction()
     {
         gm.SetState(state);
+    }
+
+    public void ResetGame()
+    {
+        gm.ResetGame();
     }
 }
