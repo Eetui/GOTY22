@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private TextUpdater healthText;
     [SerializeField] private TextUpdater pointsText;
+    [SerializeField] private TextUpdater pointsGameOverText;
+    [SerializeField] private TextUpdater highScoreText;
 
     [SerializeField] private CanvasGroup startScreen;
     [SerializeField] private CanvasGroup gameScreen;
@@ -63,6 +65,19 @@ public class GameManager : MonoBehaviour
     private void EndGame()
     {
         SetState(GameState.GameOver);
+        pointsGameOverText.UpdateText(Instance.Points.ToString());
+
+        var highScore = PlayerPrefs.GetInt("score", 0);
+
+        if (Instance.Points > highScore)
+        {
+            highScoreText.UpdateText(Instance.Points.ToString());
+            PlayerPrefs.SetInt("score", Instance.Points);
+        }
+        else
+        {
+            highScoreText.UpdateText(highScore.ToString());
+        }
     }
 
     public void SetState(GameState nextState)
