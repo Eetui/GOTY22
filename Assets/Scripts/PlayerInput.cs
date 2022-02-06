@@ -215,7 +215,7 @@ public class PlayerInput : MonoBehaviour
 
     IEnumerator SpawnProjectile()
     {
-        //Vector3 curTarget = new Vector3(posCurrent.x, posCurrent.y, 20f);
+        FindObjectOfType<AudioManager>().Play("ShootSound");
         GameObject shot = Instantiate(bulletPrefab, this.gameObject.transform.position, Quaternion.identity);
         shot.LeanMoveLocalZ(bulletDistance, bulletLifetime);
         yield return new WaitForSeconds(bulletLifetime);
