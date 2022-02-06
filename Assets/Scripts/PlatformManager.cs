@@ -8,7 +8,8 @@ public class PlatformManager : MonoBehaviour
     [SerializeField] private float startSpeed;
     
     public List<Platform> Platforms = new List<Platform>();
-    
+    [SerializeField] private List<CloudMaster> clouds = new List<CloudMaster>();
+
     private void Awake()
     {
         if (Instance == null)
@@ -63,6 +64,29 @@ public class PlatformManager : MonoBehaviour
         foreach (var plat in Platforms)
         {
             plat.Speed += speedChange;
+        }
+    }
+
+    public void ResetSpeed()
+    {
+        foreach (var plat in Platforms)
+        {
+            plat.Speed = startSpeed;
+        }
+    }
+
+    public void ResetClouds()
+    {
+        foreach (var plat in Platforms)
+        {
+            plat.ResetPosition();
+        }
+
+        foreach (var cloud in clouds)
+        {
+
+            cloud.ResetClouds();
+            Debug.Log("Reset cloud: " + cloud);
         }
     }
 }

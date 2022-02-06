@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     public int MaxHealth { get; set; } = 5;
     public int Health { get; set; }
 
+    [SerializeField] private TextUpdater healthText;
+    [SerializeField] private TextUpdater pointsText;
+
     [SerializeField] private CanvasGroup startScreen;
     [SerializeField] private CanvasGroup gameScreen;
     [SerializeField] private CanvasGroup gameOverScreen;
@@ -41,11 +44,25 @@ public class GameManager : MonoBehaviour
     {
         SetFirstState(GameState.Start);
         OnStateChanged?.Invoke(CurrentState);
+        
+        ResetGame();
     }
     
     public void ResetGame()
     {
         Health = MaxHealth;
+        Points = 0;
+
+        healthText.UpdateText(Instance.Health.ToString());
+        pointsText.UpdateText(Instance.Points.ToString());
+        
+        PlatformManager.Instance.ResetSpeed();
+        PlatformManager.Instance.ResetClouds();
+    }
+
+    private void EndGame()
+    {
+        SetState(GameState.GameOver);
     }
 
     public void SetState(GameState nextState)
@@ -104,7 +121,14 @@ public class GameManager : MonoBehaviour
         //TODO: Damange Sounds
         Debug.Log("TODO: Damage Sounds");
         Instance.Health--;
+        
+        if (Instance.Health <= 0)
+        {
+            EndGame();
+        }
+        
         PlatformManager.Instance.ChangeSpeed(-0.08f);
+        healthText.UpdateText(Instance.Health.ToString());
     }
 
     public void ScorePoints()
@@ -113,5 +137,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("TODO: ScorePoints");
         PlatformManager.Instance.ChangeSpeed(0.02f);
         Instance.Points += 10;
+        
+        pointsText.UpdateText(Instance.Points.ToString());
     }
 }

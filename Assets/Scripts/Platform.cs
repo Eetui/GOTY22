@@ -1,9 +1,18 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
     public float Speed { get; set; }
     public bool Move { get; set; }
+
+    private Vector3 startPos;
+
+    public void Awake()
+    {
+        startPos = transform.position;
+    }
+
     private void FixedUpdate()
     {
         if (!Move) return;
@@ -18,5 +27,10 @@ public class Platform : MonoBehaviour
     private void OnDisable()
     {
         PlatformManager.Instance.Platforms.Remove(this);
+    }
+
+    public void ResetPosition()
+    {
+        transform.position = startPos;
     }
 }

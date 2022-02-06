@@ -4,16 +4,18 @@ public class WallOfDeath : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        var platform = other.GetComponentInParent<Platform>();
+        if (!other.CompareTag("Platform")) return;
         
+        Platform platform = other.GetComponentInParent<Platform>();
+
         if (platform != null)
         {
-            ResetPosition(platform);
+            MoveToLastPosition(platform);
             platform.GetComponentInChildren<CloudMaster>().ResetClouds();
         }
     }
     
-    private void ResetPosition(Platform platform)
+    private void MoveToLastPosition(Platform platform)
     {
         var pos = platform.transform.position;
         platform.transform.position = new Vector3(pos.x, pos.y, 98f);
