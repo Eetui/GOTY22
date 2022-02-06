@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7604199705717232461}
   - component: {fileID: 7180906988477693489}
   - component: {fileID: 8132890696918670354}
+  - component: {fileID: 3740272826806748555}
   m_Layer: 0
   m_Name: StormCloud0
   m_TagString: Untagged
@@ -90,11 +91,23 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157866618754250754}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3740272826806748555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157866618754250754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 557ed633aa8a34647aeba8a97294dfcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &623747429487639267
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,6 +120,7 @@ GameObject:
   - component: {fileID: 4448812947809617400}
   - component: {fileID: 5877148695155969420}
   - component: {fileID: 6726218628775160930}
+  - component: {fileID: 5228437280283835662}
   m_Layer: 0
   m_Name: Rainbow0
   m_TagString: Untagged
@@ -185,11 +199,23 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623747429487639267}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5228437280283835662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623747429487639267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d44f95019e414468def0e34ba10928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4198983006927664315
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,6 +228,7 @@ GameObject:
   - component: {fileID: 5246501681244525109}
   - component: {fileID: 6104821528241054087}
   - component: {fileID: 9007750709540487268}
+  - component: {fileID: 4907636926259242180}
   m_Layer: 0
   m_Name: BasicCloud0
   m_TagString: Untagged
@@ -280,11 +307,23 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4198983006927664315}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4907636926259242180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4198983006927664315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 557ed633aa8a34647aeba8a97294dfcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5235025365126536722
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +336,7 @@ GameObject:
   - component: {fileID: 8986649777634068886}
   - component: {fileID: 261772188215724662}
   - component: {fileID: 6423138439324304554}
+  - component: {fileID: 2871330011334649545}
   m_Layer: 0
   m_Name: StormCloud0
   m_TagString: Untagged
@@ -375,11 +415,23 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5235025365126536722}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2871330011334649545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5235025365126536722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 557ed633aa8a34647aeba8a97294dfcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5264106486488119216
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,7 +527,7 @@ BoxCollider:
   m_GameObject: {fileID: 5264106486488119216}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -605,6 +657,7 @@ GameObject:
   - component: {fileID: 5264106487045777894}
   - component: {fileID: 5264106487045777895}
   - component: {fileID: 5264106487045777892}
+  - component: {fileID: 3734071939677989038}
   m_Layer: 0
   m_Name: Rainbow0
   m_TagString: Untagged
@@ -683,11 +736,23 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5264106487045777898}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3734071939677989038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5264106487045777898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d44f95019e414468def0e34ba10928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5264106487144609964
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,6 +765,7 @@ GameObject:
   - component: {fileID: 5264106487144609960}
   - component: {fileID: 5264106487144609961}
   - component: {fileID: 5264106487144609966}
+  - component: {fileID: 8395041621882289506}
   m_Layer: 0
   m_Name: BasicCloud0
   m_TagString: Untagged
@@ -778,11 +844,23 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5264106487144609964}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8395041621882289506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5264106487144609964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 557ed633aa8a34647aeba8a97294dfcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5264106487618817310
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,6 +873,7 @@ GameObject:
   - component: {fileID: 5264106487618817306}
   - component: {fileID: 5264106487618817307}
   - component: {fileID: 5264106487618817304}
+  - component: {fileID: 6230703346894021688}
   m_Layer: 0
   m_Name: StormCloud0
   m_TagString: Untagged
@@ -873,11 +952,23 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5264106487618817310}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6230703346894021688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5264106487618817310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 557ed633aa8a34647aeba8a97294dfcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5264106487667696905
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,6 +1407,7 @@ GameObject:
   - component: {fileID: 404554158891382271}
   - component: {fileID: 7343577006945542713}
   - component: {fileID: 5790236835760620800}
+  - component: {fileID: 5865782913596577688}
   m_Layer: 0
   m_Name: BasicCloud0
   m_TagString: Untagged
@@ -1394,11 +1486,23 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5634530860797934458}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5865782913596577688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5634530860797934458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 557ed633aa8a34647aeba8a97294dfcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6473106915706489736
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,6 +1632,7 @@ GameObject:
   - component: {fileID: 5914552275925816449}
   - component: {fileID: 7931617593895805187}
   - component: {fileID: 7865911302355069151}
+  - component: {fileID: 7385459335864168347}
   m_Layer: 0
   m_Name: Rainbow0
   m_TagString: Untagged
@@ -1606,8 +1711,20 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7220922527732580550}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7385459335864168347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7220922527732580550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d44f95019e414468def0e34ba10928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

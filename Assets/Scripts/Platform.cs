@@ -12,6 +12,7 @@ public class Platform : MonoBehaviour
 
     private void OnEnable()
     {
+        Debug.Log(PlatformManager.Instance);
         PlatformManager.Instance.Platforms.Add(this);
     }
 

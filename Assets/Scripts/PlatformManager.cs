@@ -9,6 +9,8 @@ public class PlatformManager : MonoBehaviour
     
     private void Awake()
     {
+        Debug.Log("Tää pitää olla eka");
+
         if (Instance == null)
         {
             Instance = this;
